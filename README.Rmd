@@ -63,7 +63,7 @@ There are then a set of functions for the darkest colours (e.g. `unibeRed`, `uni
 
 The colours can be used in `ggplot2` or `base` graphics...
 
-```{r base, fig.height = 6}
+```{r base, fig.height = 4}
 library(patchwork)
 library(ggplot2)
 # par(mai = c(.5, .5, .5. .5))
