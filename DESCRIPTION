@@ -1,6 +1,6 @@
 Package: unibeCols
 Title: University of Bern Corporate Colours
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "Alan G.", family = "Haynes", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"),
