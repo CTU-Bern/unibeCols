@@ -15,4 +15,5 @@ Imports:
     forcats,
     ggplot2
 Suggests:
+    gridGraphics,
     patchwork
