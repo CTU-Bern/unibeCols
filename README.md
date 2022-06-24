@@ -4,6 +4,7 @@
 # `unibeCols` <img src='man/figures/ub_Logo_english_2019_RGB.png' align="right" width="200">
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 `unibeCols` contains the corporate design colours of the University of
@@ -13,8 +14,11 @@ manual](https://intern.unibe.ch/unibe/uniintern/content/e1883/e683686/e695596/e1
 ## Installation
 
 <!-- You can install the released version of `unibeCols` from [CRAN](https://CRAN.R-project.org) with: -->
+
 <!-- ``` r -->
+
 <!-- install.packages("unibeCols") -->
+
 <!-- ``` -->
 
 `unibeCols` can be installed from github via
@@ -55,7 +59,6 @@ The colours can be used in `ggplot2` or `base` graphics…
 ``` r
 library(patchwork)
 library(ggplot2)
-#> Warning: Paket 'ggplot2' wurde unter R Version 4.1.2 erstellt
 # par(mai = c(.5, .5, .5. .5))
 p1 <- ggplot(mtcars, aes(x = disp, y = mpg, col = factor(carb))) + 
   geom_point() + 
@@ -75,5 +78,7 @@ cat(paste0('<p style="color:', unibeRed(), '">This should be red</p>'))
 ```
 
 <p style="color:#e4003c">
+
 This should be red
+
 </p>
