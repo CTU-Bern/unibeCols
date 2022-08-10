@@ -55,7 +55,6 @@ The colours can be used in `ggplot2` or `base` graphics…
 ``` r
 library(patchwork)
 library(ggplot2)
-#> Warning: Paket 'ggplot2' wurde unter R Version 4.1.2 erstellt
 # par(mai = c(.5, .5, .5. .5))
 p1 <- ggplot(mtcars, aes(x = disp, y = mpg, col = factor(carb))) + 
   geom_point() + 
@@ -68,7 +67,7 @@ p1 + ~plot(mpg ~ disp, mtcars,
 <img src="man/figures/README-base-1.png" width="100%" />
 
 … and can also be used to colour text (syntax and result depends on the
-output format, the following should work for HTML):
+output format, the following should work for HTML, but not github):
 
 ``` r
 cat(paste0('<p style="color:', unibeRed(), '">This should be red</p>'))
