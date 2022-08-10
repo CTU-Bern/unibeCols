@@ -1,6 +1,6 @@
 Package: unibeCols
 Title: University of Bern Corporate Colours
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Alan G.", family = "Haynes", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"),
@@ -10,10 +10,9 @@ Description: The University of Bern has a set of corporate design colours. This 
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
-Imports:
-    forcats,
-    ggplot2
+RoxygenNote: 7.2.0
 Suggests:
-    gridGraphics,
-    patchwork
+  ggplot2,
+  gridGraphics,
+  patchwork
+

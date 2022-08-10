@@ -119,8 +119,7 @@ unibeApricotS <- function() c(unibeApricot(), "#f3923e", "#f7af70", "#fbcba1", "
 #' @export
 #' @rdname unibecols
 #' @param plot plot the colours. if FALSE, returns a dataframe of the colours
-#' @importFrom ggplot2 ggplot geom_tile scale_fill_identity theme_bw theme aes element_blank
-#' @importFrom forcats fct_rev
+#' @importFrom graphics par axis rect
 #' @examples
 #' unibeRed()
 #' unibeRedS()
@@ -146,16 +145,31 @@ unibePalettes <- function(plot = TRUE){
   dat$palette <- factor(dat$palette, cols)
 
   if(plot){
-    ggplot(dat, aes(x = x, y = fct_rev(palette), fill = cols)) +
-      geom_tile() +
-      scale_fill_identity() +
-      theme_bw() +
-      theme(axis.title = element_blank())
+
+    pals <- dat
+    pals$x2 <- pals$x + 1
+    pals$y <- as.numeric(factor(pals$palette, rev(unique(pals$palette)))) - .5
+    pals$y2 <- as.numeric(factor(pals$palette, rev(unique(pals$palette)))) + .5
+
+    oldpar <- par(mai = c(.5, 1.5, .5, .5))
+    on.exit(par(oldpar))
+
+    plot(1,1,type = "n",
+         xlim = c(min(pals$x, pals$x2), max(pals$x, pals$x2)),
+         ylim = c(min(pals$y, pals$y2), max(pals$y, pals$y2)),
+         xaxt = "n", yaxt = "n", xlab = "", ylab = "", bty = "n")
+    with(pals, rect(x, y, x2, y2, col = cols, border = NA))
+    axis(at = as.numeric(unique(factor(pals$palette, rev(unique(pals$palette))))),
+         labels = unique(factor(pals$palette, rev(unique(pals$palette)))),
+         side = 2, las = 2)
+    axis(side = 1, at = unique(pals$x) + .5, labels = unique(pals$x))
+
   } else {
     dat
   }
 
 }
+
 
 #' list of all UNIBE scales
 #' @export

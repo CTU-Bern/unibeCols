@@ -75,7 +75,7 @@ p1 + ~plot(mpg ~ disp, mtcars,
            col = NA, pch = 21)
 ```
 
-... and can also be used to colour text (syntax and result depends on the output format, the following should work for HTML):
+... and can also be used to colour text (syntax and result depends on the output format, the following should work for HTML, but not github):
 
 ```{r, results='asis'}
 cat(paste0('<p style="color:', unibeRed(), '">This should be red</p>'))
