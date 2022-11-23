@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `unibeCols` <img src='man/figures/ub_Logo_english_2019_RGB.png' align="right" width="200">
+# `unibeCols` <img src='man/figures/logo.png' align="right" width="125">
+
+<!-- <img src='man/figures/ub_Logo_english_2019_RGB.png' align="right" width="200"> -->
 
 <!-- badges: start -->
 
